@@ -66,7 +66,7 @@ def open_file(folder, file_name):
     file_path = os.path.join(folder, file_name)
     if '1' in folder:
         #all exp 1 lack a column name
-        df = pd.read_csv(file_path, header = None)
+        df = pd.read_csv(file_path, header = None, names = ['C1', 'C2', 'C3', 'C4', 'C5', 'C6', 'C7', 'C8', 'C9'])
     else:
         df = pd.read_csv(file_path)
     return df
